@@ -1,9 +1,10 @@
 import React from 'react'
 import useForm from "./useForm"
 import validate from "./validateInfo"
+import "./Form.css"
 
-const FormSingup = () => {
-    const { handleChange, values, handleSubmit, errors } = useForm(validate);
+const FormSingup = ({submitForm}) => {
+    const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
 
 
 
@@ -73,6 +74,7 @@ const FormSingup = () => {
                         className="form-input"
                         />
                     <span>I accept the <a href= "https://clarusway.com/about/">Privacy Policy</a></span>
+                    {errors.checkbox && <p>{errors.checkbox}</p>}
                 </div>
                 <button className="form-input-btn" type="submit">Register</button>
                 <p className="form-input-login">Already have an account?<a href="#">Login</a></p>

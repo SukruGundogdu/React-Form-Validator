@@ -31,5 +31,10 @@ export default function validateInfo(values) {
         errors.password2 = "Passwords do not match"
     }
 
+    //Checkbox
+    if(!values.checkbox) {
+        errors.checkbox = "Read the Privacy Policy and Check the Box"
+    }
+
     return errors;
 }
