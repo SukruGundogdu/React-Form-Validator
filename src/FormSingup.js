@@ -1,8 +1,9 @@
 import React from 'react'
 import useForm from "./useForm"
+import validate from "./validateInfo"
 
 const FormSingup = () => {
-    const { handleChange, values, handleSubmit } = useForm();
+    const { handleChange, values, handleSubmit, errors } = useForm(validate);
 
 
 
@@ -19,6 +20,7 @@ const FormSingup = () => {
                         value={values.firstName}
                         onChange={handleChange}
                         />
+                        {errors.firstName && <p>{errors.firstName}</p>}
                 </div>
                 <div className="form-input">
                     <input
@@ -29,6 +31,7 @@ const FormSingup = () => {
                         value={values.lastName}
                         onChange={handleChange}
                         />
+                        {errors.lastName && <p>{errors.lastName}</p>}
                 </div>
                 <div className="form-input">
                     <input
@@ -39,6 +42,7 @@ const FormSingup = () => {
                         value={values.email}
                         onChange={handleChange}
                         />
+                        {errors.email && <p>{errors.email}</p>}
                 </div>
                 <div className="form-input">
                     <input
@@ -49,6 +53,7 @@ const FormSingup = () => {
                         value={values.password}
                         onChange={handleChange}
                         />
+                        {errors.password && <p>{errors.password}</p>}
                 </div>
                 <div className="form-input">
                     <input
@@ -59,6 +64,7 @@ const FormSingup = () => {
                         value={values.password2}
                         onChange={handleChange}
                         />
+                        {errors.password2 && <p>{errors.password2}</p>}
                 </div>
                 <div className="form-input">
                     <input
