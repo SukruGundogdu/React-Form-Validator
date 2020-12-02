@@ -32,9 +32,9 @@ export default function validateInfo(values) {
     }
 
     //Checkbox
-    if(!values.checkbox) {
-        errors.checkbox = "Read the Privacy Policy and Check the Box"
-    }
+    // if(!values.checkbox) {
+    //     errors.checkbox = "Read the Privacy Policy and Check the Box"
+    // }
 
     return errors;
 }
