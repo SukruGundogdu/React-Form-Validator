@@ -92,6 +92,11 @@
   color: #f00e0e;
 }
 
+.check-input p {
+  color: #f00e0e;
+}
+
+
 .form-label {
   display: inline-block;
   font-size: 0.8rem;

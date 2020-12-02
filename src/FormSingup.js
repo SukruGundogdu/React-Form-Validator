@@ -77,6 +77,7 @@ const FormSingup = ({submitForm}) => {
                         type="checkbox"
                         name="checkbox"
                         className="check-input"
+                        // onChange={handleChange}
                         />
                     <span>I accept the <a href= "https://clarusway.com/about/">Privacy Policy</a></span>
                     {errors.checkbox && <p>{errors.checkbox}</p>}
